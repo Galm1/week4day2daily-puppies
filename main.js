@@ -6,15 +6,11 @@ let input = document.querySelector('#search_bar');
 
 button.addEventListener('click', function(event) {
 
-  let searchInput = input.value;
-
-  input.value = '';
-  let newSearch = url;
-  recipes_finder(newSearch);
+  recipes_finder(url, input.value);
 })
 
-function recipes_finder(url) {
-  fetch(url)
+function recipes_finder(url, search) {
+  fetch(url + search)
     .then(function(response) {
       return response.json();
     })
