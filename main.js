@@ -26,14 +26,14 @@ function displayNewOutput(data) {
   results.forEach(function(recipe) {
     let trueContent = `
       <div class='recipe'>
+      <div class='image'>
+        <a href='${recipe.href}'><img src='${recipe.thumbnail}'>  </a>
+      </div>
         <div class='recipeName'>
           ${recipe.title}
         </div>
         <div class='ingredients'>
           ${recipe.ingredients}
-        </div>
-        <div class='image'>
-          <a href='${recipe.href}'><img src='${recipe.thumbnail}'>  </a>
         </div>
       </div>
     `
